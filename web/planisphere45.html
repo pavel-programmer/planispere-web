@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Style.css">
+
+</head>
+<body>
+
+    <div class="menu">
+        <button id="customizeBtn"><img src="check.png" width="55" height="55"></button>
+        <button id="finetuningBtn"><img src="clock.png" width="50" height="50"></button>
+        <button id="directionsBtn"><img src="compass.png" width="55" height="55"></button>
+        <b><button id="back" title="Back to settings"><img src="arrow.png" width="55" height="55"></button></b>
+        <button id="q"><img src="question.png" width="55" height="55"></button>
+
+    </div>
+
+    <div id="content">
+
+        <div id="directionsMenu">
+            <button id="resetBtn">North</button>
+            <button id="rotateEastBtn">East</button>
+            <button id="rotateSouthBtn">South</button>
+            <button id="rotateWestBtn">West</button>
+        </div>
+        <div id="finetuning">
+            <button id="plus">&plus;</button>
+            <button id="minus">&minus;</button>
+        </div>
+
+        <div id="modal">
+            <div id="modalContent">
+                <span id="closeBtn">&times;</span>
+                <h1 style="color:white;">How it works:</h1>
+                <img src="pict1.png" style="float: left; margin-left: 10px; margin-top: 5px; position: static; transform: none; top: auto; left: auto; " width="150">
+                <p>On the edges of the map the months and dates are marked. On the edges of the circle hours and minutes are marked. To set the planisphere for a specific date and time, you need to match the date on the map with the time on the circle, and also make an adjustment for local time.</p>
+                <img src="pict2.png" style="float: right; margin-right: 10px; position: static; transform: none; top: auto; left: auto;" width="100" ;>
+                <p>First, set the observation date and time to within 10 minutes, then click the <span class="icon" id="icon1"></span>button.</p>
+                <p>If your coordinates and time zone are entered correctly, congratulations — the planisphere is ready and shows the night sky.</p>
+                <p>For more convenient observation of the stars, use the <span class="icon" id="icon2"></span> button to adjust the map according to the cardinal directions. Just stand facing the wished direction and tap the corresponding button.</p>
+                <p>If you want to slightly adjust the result shown by the map, use the <span class="icon" id="icon3"></span> button. This is especially useful if you have not entered your coordinates and time zone or have done it incorrectly.</p>
+            </div>
+        </div>
+
+
+        <div id="images">
+            <div id="mapsun">
+                <img src="Map.png" width="350" id="map-image" />
+                <img src="45.png" width="317" id="rotate-image" />
+            </div>
+        </div>
+
+        <div id="dropdown">
+            <p class="text" id="first_month">Month:</p>
+            <select id="month">
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select>
+            <p class="text">Day:</p>
+            <select id="day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <p class="text">Hours:</p>
+            <select id="hours">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+            </select>
+            <p class="text">Minutes:</p>
+            <select id="minutes">
+                <option value="0">0</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select><br><br>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="Script.js">
+    </script>
+
+
+</body>
+</html>

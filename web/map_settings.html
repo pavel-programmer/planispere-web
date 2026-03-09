@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0, user-scalable=yes">
+
+    <link rel="stylesheet" href="Style2.css">
+
+
+</head>
+<body>
+<div class="container">
+
+
+    <div id="content">
+        <h1><b>To set up the map we need some information.<br> Fill in the fields or use <a href="#getLocationBtn" style="color: white; text-decoration: underline; font-style: italic; ">automatic setup</a></b></h1>
+
+        <div id="tooltip">
+            Why do we need this?
+        </div>
+
+
+        <div id="modal">
+            <div id="modalContent">
+                <span id="closeBtn">&times;</span>
+
+
+                <img src="Planisphere.jpg" width="20%" style="float: left; margin: 10px; margin-top: 35px;" />
+
+                <p>A planisphere is a movable star map that allows you to get a view of the starry sky at a certain time. The planisphere consists of two parts - the star map itself and a special circle, placed on top of this map. To set up the map correctly, you need to know your geographic coordinates, because the view of the starry sky varies at different points on the globe.</p>
+                <p> The circle defines which part of the sky is visible from your latitude. In the Northern Hemisphere, depending on how close to the equator you are, you can see more of the southern sky, and this special circle allows you to see them on the map. That is why we need your latitude.</p>
+                <p>The remaining values ​​are needed to match your time as closely as possible to the time shown on the map.  The planisphere itself displays the view of the starry sky as it is on the prime meridian. This time may not coincide with your time. Therefore, there is a special formula for adjusting the map: </p>
+
+                <img src="formula1.png" />
+
+                <p>where T<sub>real</sub> is real time, n is time zone in UTC format, 𝝀 is the time it takes the Earth to rotate by the number of degrees of longitude.</p>
+                <p>This formula allows us to obtain the result in the form below:</p>
+
+                <img src="formula2.png" />
+
+                <p>This shows how many minutes we need to add or subtract from your real time to get the correct view of the starry sky for your longitude.</p>
+                <p> You can leave the last three fields at their default values, but in that case you will need to adjust the map manually to match your local time.</p>
+
+                
+
+
+            </div>
+        </div>
+
+
+        <p id="in"> Your latitude: </p><input id="latitudeInput" value="0" required><p id="in"> degrees</p>
+        <br>
+        <p id="in">   Your longitude:</p> <input id="longitudeInput" value="0" required><p id="in"> degrees</p>
+        <br>
+
+        <p id="in"> Your time zone for daylight saving time in UTC format: </p><input id="summerUTC" value="0" required>
+        <br>
+        <p id="in"> Your time zone for winter time in UTC format: </p><input id="winterUTC" value="0" required>
+
+        <br>
+        <button id="getLocationBtn">Use geolocation</button>
+        <br>
+        <button id="loadBtn" onclick="input()">Load planisphere</button>
+        <br><br>
+        <div id="convertedValue"></div>
+
+
+
+    </div>
+
+       
+</div>
+
+
+    <script src="Script2.js"></script>
+    
+
+
+</body>
+</html>
