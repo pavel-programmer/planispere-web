@@ -20,7 +20,7 @@
 
 ###### \- Folder apk/ contains the Android version
 
-###### \- Note: Not published on Play Market
+###### \- Note: Not published on Google Play
 
 ###### \- You can install manually on your Android device
 
